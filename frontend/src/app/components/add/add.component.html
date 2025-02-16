@@ -1,0 +1,39 @@
+<form [formGroup]="puebloForm" class="container mt-4">
+  <div class="col-md-6 mb-3">
+    <label for="nombrePueblo" class="form-label">Nombre del Pueblo</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nombrePueblo"
+      formControlName="nombrePueblo"
+      placeholder="Ingrese el nombre del pueblo"
+      required
+    />
+  </div>
+
+  <div class="col-md-6 mb-3">
+    <label for="numTerritorios" class="form-label">Número de Territorios</label>
+    <input
+      type="number"
+      class="form-control"
+      id="numTerritorios"
+      formControlName="numTerritorios"
+      min="1"
+      required
+    />
+  </div>
+
+  <button type="button" class="btn btn-primary" (click)="generarTerritorios()">
+    Generar Territorios
+  </button>
+
+  <div class="mt-3" #territoriosContainer></div>
+
+  <button
+    type="submit"
+    class="btn btn-success mt-3"
+    (click)="guardarPueblo($event)"
+  >
+    Guardar
+  </button>
+</form>

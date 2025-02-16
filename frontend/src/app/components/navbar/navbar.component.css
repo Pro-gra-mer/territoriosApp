@@ -1,0 +1,47 @@
+/* Estilo de la barra de navegación */
+.navbar {
+  background-color: var(--snow);
+}
+
+/* Estilos base para los enlaces */
+.nav-link {
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s ease-in-out, opacity 0.3s;
+  cursor: pointer;
+}
+
+/* Subrayado dinámico */
+.nav-link.active::after,
+.nav-link:hover::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px; /* Espacio entre el texto y el subrayado */
+  width: 100%;
+  height: 3px;
+  background-color: currentColor; /* Usa el mismo color del texto */
+}
+
+/* Color de cada enlace */
+.nav-link.disponibles {
+  color: var(--yellow-green);
+}
+
+.nav-link.devolver {
+  color: var(--blue-green);
+}
+
+.nav-link.añadir {
+  color: var(--prussian-blue);
+}
+
+.nav-link.editar {
+  color: var(--ut-orange);
+}
+
+/* Hover y selección */
+.nav-link.active,
+.nav-link:hover {
+  opacity: 0.8;
+}
